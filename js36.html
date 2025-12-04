@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add()
+        {
+            let box1 = document.getElementById("box1");
+
+            let s = "<h1 style='color:red;'> Espert IT </h1>";
+
+            box1.innerHTML = s;
+
+
+            let d = document.createElement("h1"); // <h1> </h1>
+
+            d.innerText = "Expert IT" // <h1> Expert IT </h1>
+
+            d.style.fontSize = "55px";  // <h1  style='font-size:55px;'> Expert IT </h1>
+
+            d.style.color = "red"; // <h1  style='font-size:55px;color:red;'> Expert IT </h1>
+
+
+            box1.append(d);
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="add()">
+        Save
+    </button>
+
+    <div id="box1">
+
+    </div>
+
+    
+</body>
+</html>

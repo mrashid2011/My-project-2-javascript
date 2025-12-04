@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let c = 18;
+
+        function inc() {
+
+            c = c + 5;
+            let h1 = document.getElementById("h123");
+
+            h1.style.fontSize = c + "px";
+
+            let def_color = h1.style.color;
+
+            if (def_color == "blue") {
+                h1.style.color = "red";
+            }
+            else {
+                h1.style.color = "blue";
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <button onclick="inc()">Counter</button>
+    <h1 id="h123" style="color: blue;">I am in Karchi</h1>
+
+
+</body>
+
+</html>

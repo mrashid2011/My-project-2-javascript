@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        
+
+
+        // locaStorage is permanent storage inside browser for each website.
+
+        // setItem - k:v
+        // getItem - k
+        // removeItem - k
+
+
+        // window.localStorage.setItem("naam","expert");
+
+        // console.log(window.localStorage.getItem("naam"));
+
+        
+        // window.localStorage.removeItem("naam")
+
+
+        function changeColor()
+        {
+            let color = prompt("select color");
+
+            window.localStorage.setItem("backColor",color);
+
+            document.body.style.backgroundColor = color;
+        }
+
+    </script>
+</head>
+<body>
+
+    <button onclick="changeColor()">set colr</button>
+
+    <button onclick="document.body.style.backgroundColor='red';">To Red</button>
+    
+</body>
+</html>
+
+<script>
+
+document.body.style.backgroundColor = window.localStorage.getItem("backColor");
+
+
+</script>

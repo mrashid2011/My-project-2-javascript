@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function toggleDark()
+        {
+            let cont  = document.getElementById("cont");
+            cont.classList.toggle("dark");
+
+            // cont.classList.remove("light");
+
+            // cont.className = "container dark";
+        }
+
+    </script>
+
+    <style>
+        .container{
+            width: 50%;
+            padding: 20px;
+        
+            background-color: aliceblue;
+            color: navy;
+
+            border: 2px navy solid;
+        }
+
+        h1 {
+        
+            font-size: 32px;
+
+        }
+        p{
+            font-size: 20px;
+        }
+
+        .dark {
+        
+            background-color: navy;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleDark()">Toggle Dark Mode</button>
+    
+    <div id="cont" class="container light">
+
+        <h1>
+            EXPERT IT
+        </h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt assumenda voluptatem dignissimos amet. Quasi nam atque dicta qui sunt vel quae nobis ducimus. Numquam quos porro sunt natus cupiditate? Vero?</p>
+    </div>
+
+
+
+</body>
+</html>

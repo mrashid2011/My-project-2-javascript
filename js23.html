@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function one() {
+           document.getElementById("id123").innerText = "One";
+        }
+
+        
+        function two() {
+           document.getElementById("id123").innerText = "Two";
+        }
+
+        
+        function three() {
+         document.getElementById("id123").innerText = "Three";
+
+        }
+
+
+        function red() {
+            
+         document.getElementById("id123").style.color = "red";
+        }
+
+        
+        function blue() {
+            
+         document.getElementById("id123").style.color = "blue";
+        }
+        
+        function green() {
+            
+         document.getElementById("id123").style.color = "green";
+        }
+
+    </script>
+</head>
+<body>
+
+    <h1 id="id123">text</h1>
+
+
+
+    <button onclick="one()">Show One</button>
+    <button onclick="two()">Show Two</button>
+    <button onclick="three()">Show Three</button>
+    <hr>
+    <button onclick="red()">Turn Red</button>
+    <button onclick="blue()">Turn Blue</button>
+    <button onclick="green()">Turn Green</button>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let naam = prompt("Lenter message");
+        
+        let kyaCountKru = prompt("Kya count krna h");
+
+        let counter = 0;
+
+        for (let i = 0; i < naam.length; i++) 
+        {
+            
+            if(naam[i]==kyaCountKru)
+            {
+                counter++;
+
+                document.write("<a style='color:red;'>");
+            }
+                
+            document.write(naam[i])    
+                
+            if(naam[i]==kyaCountKru)
+            {
+                document.write("</a>");
+            }
+        }
+
+
+        document.write("<br> <br> Count of '"+kyaCountKru+"' is "+counter);
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

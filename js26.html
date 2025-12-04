@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let marginTop = 0;
+
+        function down()
+        {
+            marginTop = marginTop+10;
+
+            let box = document.getElementById("box");
+
+            box.style.marginTop = marginTop+"px";
+        }
+
+        function up()
+        {
+            marginTop = marginTop-10;
+
+            let box = document.getElementById("box");
+
+            box.style.marginTop = marginTop+"px";
+        }
+
+
+        
+        let marginLeft = 0;
+
+        function right()
+        {
+            marginLeft = marginLeft+10;
+
+            let box = document.getElementById("box");
+
+            box.style.marginLeft = marginLeft+"px";
+        }
+
+        function left()
+        {
+            marginLeft = marginLeft-10;
+
+            let box = document.getElementById("box");
+
+            box.style.marginLeft = marginLeft+"px";
+        }
+
+    </script>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="down()">Down</button>
+    <button onclick="up()">Up</button>
+    <button onclick="left()">Left</button>
+    <button onclick="right()">Right</button>
+
+    <div id="box">
+
+    </div>
+
+
+
+</body>
+</html>

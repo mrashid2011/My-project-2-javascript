@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let num1 = Number(prompt("Enter a number 1"));
+        let num2 = Number(prompt("Enter a number 2"));
+
+        let inp = prompt("What to do ? (1) Add (2) Minus (3) Multiply (4) Divide");
+
+        let opr;
+        let result;
+
+        if (inp == 1) {
+            opr = "Addition";
+            result = (num1 + num2);
+        }
+
+        else if (inp == 2) {
+            opr = "Subtraction";
+            result = (num1 - num2);
+        }
+
+        else if (inp == 3) {
+            opr = "Multiply";
+            result = (num1 * num2);
+        }
+        else if (inp == 4) {
+            opr = "Division";
+            result = (num1 / num2);
+        }
+
+
+        document.write("<h1>"+opr+": "+result+"</h1>");
+
+    </script>
+</head>
+
+<body>
+
+
+
+
+</body>
+
+</html>

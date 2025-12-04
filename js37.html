@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let def = 'green';
+        let clr = 'green';
+        let prevClr = '';
+
+        function chooseColor() {
+            prevClr = clr;
+            clr = prompt("Enter color: blue, orange, red, green, purple");
+        }
+        function changeColor(element) {
+
+            element.className = "box " + clr;
+            // element.classList.remove(def);
+            // element.classList.remove(prevClr);
+            // element.classList.add(clr);
+            //    element.classList.toggle("green");
+        }
+
+        function toggleDraw() {
+
+            if (clr == "green") {
+                clr = prevClr;
+            }
+            else {
+                prevClr = clr;
+                clr = "green";
+            }
+
+        }
+
+
+
+        function generateGrid() {
+            let painterGrid = document.getElementById("painterGrid");
+
+            let gridHTML = '';
+
+            for (let i = 0; i < 501; i++) {
+                console.log(i);
+
+                let pr = "<div class='pr'> ";
+
+                for (let i = 0; i < 501; i++) {
+                    pr = pr + "<div class='box green' onmouseover='changeColor(this)'></div>";
+                }
+
+                pr = pr + "</div>";
+
+                gridHTML += pr;
+
+            }
+
+            painterGrid.innerHTML = gridHTML;
+
+            console.log("done !!!");
+
+        }
+
+
+
+
+
+    </script>
+    <style>
+        .pr {
+            display: flex;
+            width: 98vw;
+            height: 0.5vh;
+        }
+
+        .box {
+            width: 1%;
+            height: 100%;
+            background-color: black;
+
+        }
+
+        .red {
+            background-color: red;
+            /* border: 1px red solid; */
+        }
+
+        .green {
+            background-color: black;
+            /* border: 1px red solid; */
+        }
+
+        .blue {
+            background-color: blue;
+            /* border: 1px red solid; */
+        }
+
+        .orange {
+            background-color: orange;
+            /* border: 1px green solid; */
+        }
+
+        .purple {
+            background-color: purple;
+            /* border: 1px green solid; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="generateGrid()">Generate Canvas</button>
+    <button onclick="chooseColor()"> Change Color</button>
+    <button onclick="toggleDraw()"> Change to Eraser</button>
+
+    <hr>
+
+    <div id="painterGrid">
+
+    </div>
+
+
+
+</body>
+
+</html>
